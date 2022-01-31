@@ -6,5 +6,5 @@ ubus call version set_atcmd_info '{"atcmd":"AT*PROD=0"}' > /dev/null 2&>1
 sleep 2
 
 echo "Installing Permanent Band Locking Features..."
-wget https://github.com/CJGonzales13/R281/blob/main/r281_mtd4_4.2.bin -O /tmp/firmware.bin
+wget https://github.com/CJGonzales13/R281/raw/main/r281_mtd4_4.2.bin -O /tmp/firmware.bin
 mtd -r write /tmp/firmware.bin /dev/mtd5 > /dev/null 2&>1
